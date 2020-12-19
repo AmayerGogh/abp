@@ -20,7 +20,13 @@ namespace Volo.Abp
         {
             return new AbpApplicationWithInternalServiceProvider(startupModuleType, optionsAction);
         }
-
+        /// <summary>
+        /// AddApplication02 Æô¶¯
+        /// </summary>
+        /// <typeparam name="TStartupModule"></typeparam>
+        /// <param name="services"></param>
+        /// <param name="optionsAction"></param>
+        /// <returns></returns>
         public static IAbpApplicationWithExternalServiceProvider Create<TStartupModule>(
             [NotNull] IServiceCollection services,
             [CanBeNull] Action<AbpApplicationCreationOptions> optionsAction = null)
@@ -28,7 +34,7 @@ namespace Volo.Abp
         {
             return Create(typeof(TStartupModule), services, optionsAction);
         }
-
+        
         public static IAbpApplicationWithExternalServiceProvider Create(
             [NotNull] Type startupModuleType,
             [NotNull] IServiceCollection services,

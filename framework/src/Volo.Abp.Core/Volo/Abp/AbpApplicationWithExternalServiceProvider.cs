@@ -6,6 +6,12 @@ namespace Volo.Abp
 {
     internal class AbpApplicationWithExternalServiceProvider : AbpApplicationBase, IAbpApplicationWithExternalServiceProvider
     {
+        /// <summary>
+        /// AddApplication 03
+        /// </summary>
+        /// <param name="startupModuleType"></param>
+        /// <param name="services"></param>
+        /// <param name="optionsAction"></param>
         public AbpApplicationWithExternalServiceProvider(
             [NotNull] Type startupModuleType, 
             [NotNull] IServiceCollection services, 

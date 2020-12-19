@@ -8,6 +8,13 @@ namespace Volo.Abp.Modularity
 {
     public class ModuleLoader : IModuleLoader
     {
+        /// <summary>
+        /// AddApplication 06
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="startupModuleType"></param>
+        /// <param name="plugInSources"></param>
+        /// <returns></returns>
         public IAbpModuleDescriptor[] LoadModules(
             IServiceCollection services,
             Type startupModuleType,
@@ -88,7 +95,11 @@ namespace Volo.Abp.Modularity
             services.AddSingleton(moduleType, module);
             return module;
         }
-
+        /// <summary>
+        /// AddApplication 07
+        /// </summary>
+        /// <param name="modules"></param>
+        /// <param name="services"></param>
         protected virtual void ConfigureServices(List<IAbpModuleDescriptor> modules, IServiceCollection services)
         {
             var context = new ServiceConfigurationContext(services);

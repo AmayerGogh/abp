@@ -18,7 +18,12 @@ namespace Volo.Abp
         public IServiceCollection Services { get; }
 
         public IReadOnlyList<IAbpModuleDescriptor> Modules { get; }
-
+        /// <summary>
+        /// AddApplication04 
+        /// </summary>
+        /// <param name="startupModuleType"></param>
+        /// <param name="services"></param>
+        /// <param name="optionsAction"></param>
         internal AbpApplicationBase(
             [NotNull] Type startupModuleType,
             [NotNull] IServiceCollection services,
@@ -74,7 +79,12 @@ namespace Volo.Abp
                     .InitializeModules(new ApplicationInitializationContext(scope.ServiceProvider));
             }
         }
-
+        /// <summary>
+        /// AddApplication05
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="options"></param>
+        /// <returns></returns>
         private IReadOnlyList<IAbpModuleDescriptor> LoadModules(IServiceCollection services, AbpApplicationCreationOptions options)
         {
             return services
